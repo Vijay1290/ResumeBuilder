@@ -1,0 +1,214 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>{{fname}} | {{email}}</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="http://yui.yahooapis.com/2.7.0/build/reset-fonts-grids/reset-fonts-grids.css"
+      media="all"
+    />
+    <link rel="stylesheet" type="text/css" href="../static/CSS/resume_download.css" media="all" />
+  </head>
+  <body style="background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);">
+    <div id="doc2" class="yui-t7">
+      <div id="inner">
+        <div id="hd">
+          <div class="yui-gc">
+            <div class="yui-u first">
+              <h1>{{fname}}</h1>
+              <h2>{{website}}</h2>
+            </div>
+
+            <div class="yui-u">
+              <div class="contact-info">
+                <input
+                  id="printpagebutton"
+                  type="button"
+                  value="Download Resume"
+                  onclick="printpage()"
+                />
+                <input
+                id="homepage"
+                type="button"
+                value="Previous"
+                onclick="returnhome()"
+              />
+                <h3>
+                  <a href="mailto:{{email}}">{{email}}</a>
+                </h3>
+                <h3>{{mobile}}</h3>
+                <a href="#">{{github}}</a> &nbsp;
+                <a href="#">{{linkedin}}</a>
+              </div>
+
+             
+            </div>
+          </div>
+         
+        </div>
+       
+
+        <div id="bd">
+          <div id="yui-main">
+            <div class="yui-b">
+              <div class="yui-gf">
+                <div class="yui-u first">
+                  <h2>Education</h2>
+                </div>
+                <div class="yui-u edu">
+                  <h2>{{college}}</h2>
+                  <h3>{{qualification_College}} &mdash; <strong>{{description_College}}</strong></h3>
+                  <h4>{{date1}}-{{date2}}</h4>
+                </div>
+
+                <div class="yui-u edu">
+                  <h2>{{school}}</h2>
+                  <h3>{{qualification_School}} &mdash; <strong>{{description_School}}</strong></h3>
+                  <h4>{{date3}}-{{date4}}</h4>
+                </div>
+              </div>
+
+             
+              <div class="yui-gf">
+                <div class="yui-u first">
+                  <h2>Project</h2>
+                </div>
+                <div class="yui-u">
+                  <div class="job">
+                    <h2>{{Project1_title}}</h2>
+                    <a href="#"><h3>{{Project1_link}}</h3></a>
+
+                    <p>
+                      {{Project1_Desc}}
+                    </p>
+                  </div>
+
+                  <div class="job">
+                    <h2>{{Project2_title}}</h2>
+                    <a href="#"><h3>{{Project2_link}}</h3></a>
+                    <p>
+                      {{Project2_Desc}}
+                    </p>
+                  </div>
+                  <div class="job">
+                    <h2>{{Project3_title}}</h2>
+                    <a href="#"><h3>{{Project3_link}}</h3></a>
+
+                    <p>
+                      {{Project3_Desc}}
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="yui-gf">
+                <div class="yui-u first">
+                  <h2>Skills</h2>
+                </div>
+                <div class="yui-u">
+                  <div class="talent">
+                    <h2>{{skill1}}</h2>
+                    <br />
+                    <h2>{{skill4}}</h2>
+                  </div>
+
+                  <div class="talent">
+                    <h2>{{skill2}}</h2>
+                    <br />
+                    <h2>{{skill5}}</h2>
+                  </div>
+
+                  <div class="talent">
+                    <h2>{{skill3}}</h2>
+                    <br />
+                    <h2>{{skill6}}</h2>
+                  </div>
+                </div>
+              </div>
+             
+
+              <div class="yui-gf">
+                <div class="yui-u first">
+                  <h2>Interest</h2>
+                </div>
+                <div class="yui-u">
+                  <ul class="talent">
+                    <li>{{interest1}}</li>
+
+                    <li class="last">{{interest4}}</li>
+                  </ul>
+
+                  <ul class="talent">
+                    <li>{{interest2}}</li>
+
+                    <li class="last">{{interest5}}</li>
+                  </ul>
+
+                  <ul class="talent">
+                    <li>{{interest5}}</li>
+
+                    <li class="last">{{interest6}}</li>
+                  </ul>
+                </div>
+              </div>
+             
+
+              <div class="yui-gf">
+                <div class="yui-u first">
+                  <h2>Experience</h2>
+                </div>
+                
+
+                <div class="yui-u">
+                  <div class="job">
+                    <h2>{{Exp1_institution}}</h2>
+                    <h3>{{Exp1_position}}</h3>
+                    <h4>{{Exp1_StartDate}}-{{Exp1_EndDate}}</h4>
+                    <p>
+                      {{Exp1_desc}}
+                    </p>
+                  </div>
+
+                  <div class="job">
+                    <h2>{{Exp2_institution}}</h2>
+                    <h3>{{Exp2_position}}</h3>
+                    <h4>{{Exp2_StartDate}}-{{Exp2_EndDate}}</h4>
+                    <p>
+                      {{Exp2_desc}}
+                    </p>
+                  </div>
+                </div>
+                
+              </div>
+              
+            </div>
+           
+          </div>
+         
+        </div>
+        
+      </div>
+      
+    </div>
+    
+    <script type="text/javascript">
+      function printpage() {
+        var printButton = document.getElementById("printpagebutton");
+        var homepage1 = document.getElementById("homepage");
+        homepage1.style.visibility = "hidden";
+        printButton.style.visibility = "hidden";
+        window.print();
+        homepage1.style.visibility = "visible";
+        printButton.style.visibility = "visible";
+      }
+      function returnhome(){
+          document.location.href="{% url 'selecttemp' %}"
+      }
+    </script>
+  </body>
+</html>

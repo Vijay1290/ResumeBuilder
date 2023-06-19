@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+     <!--animation css-->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+     <!--font awesome*-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/CSS/resume.css">
+    <style>
+        body{
+            background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);
+            overflow-x: hidden;
+        
+            height: auto;
+        }
+        input{
+            height: 40px;
+            background: #D3D3D3;
+            width: 35%;
+            border: none;
+            outline: none;
+            border-radius: 60px;
+        }
+        input:focus{
+            background: white;
+            border-top-style: hidden;
+            border-right-style: hidden;
+            border-left-style: hidden;
+            border-bottom-style: groove;
+            border-color: rgb(252, 81, 110);
+            border-radius: 0px;
+        }
+        textarea{
+            /* height: 40px; */
+            background: #D3D3D3;
+            width: 35%;
+            border: none;
+            outline: none;
+            border-radius: 20px;
+            
+        }
+    </style>
+</head>
+<body>
+
+
+    <div id="main">
+
+
+        <form action="" method="post">
+
+            {% csrf_token %}
+
+        <div id="div1">
+            <h1 class="fs-1 animate__animated animate__backInRight text-center pt-3 h1">Personal Details</h1><br>
+        </div>
+
+        <div id="div2">
+
+
+
+                <div class="div_p1">
+                    <input value="{{fname}}" type="text" name="page1_first1" class="input_p1" readonly>
+                    <input value="{{lname}}" type="text" name="page1_first2" class="input_p1" readonly>
+                </div>
+
+                <div class="div_p1">
+                    <input value="{{email}}" type="email"  name="page1_first3" class="input_p1" readonly>
+                    <input value="{{mobile}}" type="text" name="page1_first4" class="input_p1" readonly>
+                </div>
+
+                <div class="div_p1">
+                    <input value="{{website}}" type="text" name="page1_first5" class="input_p1" readonly>
+                    <input value="{{github}}" type="text" name="page1_first6" class="input_p1" readonly>
+                </div>
+
+                <div class="div_p1">
+                    <input value="{{linkedin}}" type="text" name="page1_first7" class="input_p1" readonly>
+                    <input value="{{twitter}}" type="text" name="page1_first8" class="input_p1" readonly>
+                </div>
+
+                <div class="div_p1">
+                    <input value="{{facebook}}" type="text" name="page1_firs9" class="input_p1" readonly>
+                    <input value="{{instagram}}" type="text" name="page1_first10" class="input_p1" readonly>
+                </div>  
+        
+            
+        </div>
+    
+        
+    
+
+
+
+        <hr>
+
+
+        <div id="div1">
+            <h1 class="fs-1 animate__animated animate__backInRight text-center pt-3 h1">Education Details</h1><br>
+        </div>
+
+
+        <div id="div2">
+
+            
+
+               
+
+                <div id="div3">
+                    <input value="{{college}}" type="text" class="c1_p2" name="page2_first1" readonly>
+                    <input value="{{qualification_College}}" type="text" class="c1_p2" name="page2_first2" readonly>
+                    
+                    <div>
+                        <input value="{{date1}}" type="text" class="c3_p2" name="page2_first7">          
+                        <input value="{{date2}}" type="text" class="c3_p2" name="page2_first8">
+                    </div>
+                   
+                </div> 
+                
+                    
+                
+                    <div id="div3">
+                        
+                        
+                            <input class="c1_p2" name="page2_first3" value="{{description_College}}">
+                                  
+                    </div>
+    
+                
+
+                <hr>
+
+                <div id="div3">
+                    <input value="{{school}}" type="text" class="c1_p2" name="page2_first4" readonly>
+                    <input value="{{qualification_School}}" type="text" class="c1_p2" name="page2_first5" readonly> 
+                    
+
+                    <div>
+                        <input value="{{date3}}" type="text" class="c3_p2" name="page2_first9">          
+                        <input value="{{date4}}" type="text" class="c3_p2" name="page2_first10">
+                    </div>
+                </div>
+
+                
+
+                <div id="div3">
+                    
+                    
+                        <input class="c1_p2" name="page2_first6"value="{{description_School}}">
+                              
+                </div>
+
+            
+            
+            
+        </div>
+   
+
+
+        <hr>
+
+
+        
+    
+        <div id="div1">
+            <h1 class="fs-1 animate__animated animate__backInRight text-center pt-3 h1">Projects Developed</h1>
+        </div>
+
+        <div id="div2">
+
+           
+
+               
+
+                <div class="div3">
+                    <p class="p_p3">Project 1</p><br>
+                    <input value="{{Project1_title}}" type="text" requried class="i_p3" readonly name="page3_first1"><br>
+                    <input value="{{Project1_link}}" type="text" requried class="i_p3" readonly name="page3_first2"><br>
+                    <div> 
+                        <textarea class="c2_p3" readonly name="page3_first3">{{Project1_Desc}}</textarea>
+                    </div>    
+                    
+                </div>
+
+
+                <div>
+                    <p class="p_p3">Project 2</p><br>
+                    <input value="{{Project2_title}}" type="text" requried class="i_p3" readonly name="page3_first4"><br>
+                    <input value="{{Project2_link}}" type="text" requried class="i_p3" readonly name="page3_first5"><br>
+                    <div> 
+                        <textarea class="c2_p3" readonly name="page3_first6">{{Project2_Desc}}</textarea>
+                    </div>    
+                    
+                </div>
+
+
+                <div>
+                    <p class="p_p3">Project 3</p><br>
+                    <input value="{{Project3_title}}" type="text" requried class="i_p3" readonly name="page3_first7"><br>
+                    <input value="{{Project3_link}}" type="text" requried class="i_p3" readonly name="page3_first8"><br>
+                    <div> 
+                        <textarea class="c2_p3" readonly name="page3_first9">{{Project3_Desc}}</textarea>
+                    </div>    
+                </div>
+            
+            
+            
+        </div>               
+    
+        
+        
+    <hr>
+
+
+        <div id="div1">
+            <h1 class="fs-1 animate__animated animate__backInRight text-center pt-3 h1">Experience Details</h1>
+        </div>
+
+        <div id="div2">
+
+            
+
+
+                <div id="div3"> 
+                    <p class="p_p4">&#10004; Experience 1</p>
+                    <br>
+
+                    <div>
+                        <input value="{{Exp1_institution}}" type="text" class="i_p4" readonly name="page4_first1">
+                        <input type="text" value="{{Exp1_position}}" required placeholder="Position*" class="i_p4" name="first9">
+                        <div>
+                            <input type="date" value="{{Exp1_StartDate}}" required class="i_p4" name="first2">          
+                            <input type="date" value="{{Exp1_EndDate}}" required class="i_p4" name="first3">
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div> 
+                        <textarea class="c2_p4" readonly name="page4_first4">{{Exp1_desc}}</textarea>
+                    </div> 
+                    
+                    
+                </div>
+                
+                
+                
+
+                <div id="div3"> 
+
+                    <p class="p_p4">&#10004; Experience 2</p>
+
+                    <br>
+
+                    <div>
+                        <input value="{{Exp2_institution}}" type="text" class="i_p4" readonly name="page4_first5">
+                        <input type="text"value="{{Exp2_position}}" required placeholder="Position*" class="i_p4" name="first10">
+                        <div>
+                            <input type="date" value="{{Exp2_StartDate}}" required class="i_p4" name="first6">          
+                            <input type="date" value="{{Exp2_EndDate}}" required class="i_p4" name="first7">
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div>
+                        <textarea class="c2_p4" readonly name="page4_first8">{{Exp2_desc}}</textarea>
+                    </div>
+                
+                </div>
+
+                
+               
+         
+
+
+           
+        </div>
+    
+
+        
+        <hr>
+
+
+        <div id="div1">
+            <h1 class="fs-1 animate__animated animate__backInRight text-center pt-3 h1">Extra Details</h1><br>
+        </div>
+
+
+        <div id="div2">
+
+            
+
+                <div id="div3">
+                    <p class="p_p5">&#10004; Skills/Languages</p><br>
+                    <input value="{{skill1}}" type="text" class="i_p5" readonly name="page5_first1">
+                    <input value="{{skill2}}" type="text" class="i_p5" readonly name="page5_first2">
+                    <input value="{{skill3}}" type="text" class="i_p5" readonly name="page5_first3">
+                </div>
+                
+                <br>
+
+                
+                <div id="div3">
+                    <input value="{{skill4}}" type="text" class="i_p5" readonly name="page5_first4">
+                    <input value="{{skill5}}" type="text" class="i_p5" readonly name="page5_first5">
+                    <input value="{{skill6}}" type="text" class="i_p5" readonly name="page5_first6">
+                </div>
+
+
+                <hr>
+
+            
+                <div id="div3">
+                    <p class="p_p5">&#10004; Interest</p><br>
+                    <input value="{{interest1}}" type="text" class="i_p5" readonly name="page5_first7">
+                    <input value="{{interest2}}" type="text" class="i_p5" readonly name="page5_first8">
+                    <input value="{{interest3}}" type="text" class="i_p5" readonly name="page5_first9">
+                </div>
+                
+                <br>
+
+
+                <div id="div3">
+                    <input value="{{interest4}}" type="text" class="i_p5" readonly name="page5_first10">
+                    <input value="{{interest5}}" type="text" class="i_p5" readonly name="page5_first11">
+                    <input value="{{interest6}}" type="text" class="i_p5" readonly name="page5_first12">
+                </div>
+            
+
+                
+                
+    
+        
+        </div>
+
+        
+
+
+
+    <hr>
+
+    
+</form>
+
+<div id="div7">
+    <a href="{% url 'page5' %}" class="btn" id="btn1">&lt;   Edit Resume</a>
+    <a href="{% url 'selecttemp' %}" class="btn">Show Resume   &gt;</a>            
+</div>
+</div>    
+
+
+</body>
+</html>

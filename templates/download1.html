@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume</title>
+    <link rel="stylesheet" type="text/css" href="../static/CSS/resume2.css" media="all" />
+    
+
+  </head>
+  <body>
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+
+    <div class="resume">
+      <div class="resume_left">
+        <div class="resume_content">
+          <div class="resume_item resume_info">
+            <div class="title">
+              <p class="bold">{{fname}}</p>
+             
+            </div>
+            <ul>
+              
+              <li>
+                <div class="icon">
+                  <i class="fas fa-mobile-alt"></i>
+                </div>
+                <div class="data">{{mobile}}</div>
+              </li>
+              <li>
+                <div class="icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="data">{{email}}</div>
+              </li>
+              <li>
+                <div class="icon">
+                  <i class="fab fa-weebly"></i>
+                </div>
+                <div class="data">{{website}}</div>
+              </li>
+            </ul>
+          </div>
+          <div class="resume_item resume_skills">
+            <div class="title">
+              <p class="bold">skill's</p>
+            </div>
+            <ul>
+              <li>
+                <div class="skill_name">{{skill1}}</div>
+
+                <div class="skill_name">{{skill4}}</div>
+               
+              </li>
+              <li>
+                <div class="skill_name">{{skill2}}</div>
+                <div class="skill_name">{{skill5}}</div>
+                
+              </li>
+              <li>
+                <div class="skill_name">{{skill3}}</div>
+                <div class="skill_name">{{skill6}}</div>
+                
+              </li>
+             
+            </ul>
+          </div>
+          <div class="resume_item resume_social">
+            <div class="title">
+              <p class="bold">Social</p>
+            </div>
+            <ul>
+              <li>
+                <div class="icon">
+                  <i class="fab fa-github"></i>
+                </div>
+                <div class="data">
+                  <p class="semi-bold">Github</p>
+                  <p>{{github}}</p>
+                </div>
+              </li>
+
+              <li>
+                <div class="icon">
+                  <i class="fab fa-linkedin"></i>
+                </div>
+                <div class="data">
+                  <p class="semi-bold">Linkedin</p>
+                  <p>{{linkedin}}</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- interest -->
+          <div class="resume_item resume_skills">
+            <div class="title">
+              <p class="bold">Interest's</p>
+            </div>
+            <ul>
+              <li>
+                <div class="skill_name">{{interest1}}</div>
+
+                <div class="skill_name">{{interest4}}</div>
+    
+              </li>
+              <li>
+                <div class="skill_name">{{interest2}}</div>
+                <div class="skill_name">{{interest5}}</div>
+         
+              </li>
+              <li>
+                <div class="skill_name">{{interest3}}</div>
+                <div class="skill_name">{{interest6}}</div>
+                
+              </li>
+              
+            </ul>
+          </div>
+          <div class="resume_item resume_skills">
+            <div class="title">
+              <p class="bold">Education</p>
+            </div>
+            <ul>
+              <li>
+                <div class="data">
+                    <p style="font-weight: 700">
+                        {{college}}
+                    </p>
+                    
+                    <p>{{date1}}-{{date2}}</p>
+
+                    <p>{{qualification_College}} - <b style="font-weight: 700">{{description_College}}</b></p>
+                </div>
+
+              </li>
+              <br>
+              <li>
+                <div class="data">
+                    
+                    <p style="font-weight: 700">
+                        {{school}}
+                    </p>
+
+                    <p>{{date3}}-{{date4}}</p>
+
+                    <p>{{qualification_School}} - <b style="font-weight: 700">{{description_School}}</b></p>
+
+                </div>
+              </li>
+            </ul>
+            
+          </div>
+        </div>
+        
+      </div>
+      
+      <div class="resume_right">
+    
+        <div class="resume_item resume_work">
+         
+            <input 
+                  id="printpagebutton"
+                  type="button"
+                  value="Download Resume"
+                  onclick="printpage()"
+                />
+                <input 
+                id="returnhome"
+                type="button"
+                value="Previous"
+                onclick="returnhome()"
+                style="float: right; margin-right: 3px;"
+              />
+                
+                  
+        
+
+          <div class="title">
+            <p class="bold">Projects</p>
+            
+          </div>
+          
+          <ul>
+            <li>
+             
+              <div class="info">
+                <p class="semi-bold">{{Project1_title}}</p>
+                <p>
+                    {{Project1_Desc}}
+                </p>
+              </div>
+            </li>
+            <li>
+            
+              <div class="info">
+                <p class="semi-bold">{{Project2_title}}</p>
+                <p>
+                    {{Project2_Desc}}
+                </p>
+              </div>
+            </li>
+            <li>
+             
+                <p class="semi-bold">{{Project3_title}}/p>
+                <p>
+                    {{Project3_Desc}}         
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+
+        <div class="resume_item resume_education">
+          <div class="title">
+            <p class="bold">Experience</p>
+            
+          </div>
+          <ul>
+            <li>
+              <div class="date">{{Exp1_StartDate}}-{{Exp1_EndDate}}</div>
+              <div class="info">
+                <p class="semi-bold">{{Exp1_institution}} - {{Exp1_position}}</p>
+                <p>
+                    {{Exp1_desc}}
+                </p>
+              </div>
+            </li>
+            <li>
+              <div class="date">{{Exp2_StartDate}}-{{Exp2_EndDate}}</div>
+              <div class="info">
+                <p class="semi-bold">{{Exp2_institution}}-{{Exp2_position}}</p>
+                <p>
+                    {{Exp2_desc}}                
+                </p>
+              </div>
+            </li>
+          </ul>
+          
+        </div>
+      
+    </div>
+    <script type="text/javascript">
+        function printpage() {
+          var printButton = document.getElementById("printpagebutton");
+          var returnhome = document.getElementById("returnhome");
+          printButton.style.visibility = "hidden";
+          returnhome.style.visibility = "hidden";
+          window.print();
+          printButton.style.visibility = "visible";
+          returnhome.style.visibility = "visible";
+        }
+
+        function returnhome() {
+          document.location.href="{% url 'selecttemp' %}"
+        }
+    </script>
+  </body>
+</html>

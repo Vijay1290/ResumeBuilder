@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+     <!--animation css-->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+     <!--font awesome*-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/CSS/page3.css">
+    <style>
+        body{
+            background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);
+            overflow-x: hidden;
+            height: 80%;
+        }
+        input{
+            height: 40px;
+            background: #D3D3D3;
+            width: 35%;
+            border: none;
+            outline: none;
+            border-radius: 60px;
+        }
+        input:focus{
+            background: white;
+            border-top-style: hidden;
+            border-right-style: hidden;
+            border-left-style: hidden;
+            border-bottom-style: groove;
+            border-color: rgb(252, 81, 110);
+            border-radius: 0px;
+        }
+        textarea{
+            /* height: 40px; */
+            background: #D3D3D3;
+            width: 35%;
+            border: none;
+            outline: none;
+            border-radius: 20px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="div1">
+            <h1 class="fs-1 animate__animated animate__backInRight text-center pt-3">Projects Developed</h1><br>
+        </div>
+        <div id="div2">
+            <form action="" method="post">
+                {% csrf_token %}
+                <div class="div3">
+                    <p class="p">Project 1</p><br>
+                    <input type="text" required placeholder="Title*" class="i" name="first1"><br>
+                    <input type="text" required placeholder="Link*" class="i" name="first2"><br>
+                    <div> 
+                        <textarea placeholder=" Description *" required class="c2" name="first3"></textarea>
+                    </div>    
+                    <hr>
+                </div>
+                <div>
+                    <p class="p">Project 2</p><br>
+                    <input type="text" required placeholder="Title*" class="i" name="first4"><br>
+                    <input type="text" required placeholder="Link*" class="i" name="first5"><br>
+                    <div> 
+                        <textarea placeholder=" Description *" required class="c2" name="first6"></textarea>
+                    </div>    
+                    <hr>
+                </div>
+                <div>
+                    <p class="p">Project 3</p><br>
+                    <input type="text" required placeholder="Title*" class="i" name="first7"><br>
+                    <input type="text" required placeholder="Link*" class="i" name="first8"><br>
+                    <div> 
+                        <textarea placeholder=" Description *" required class="c2" name="first9"></textarea>
+                    </div>    
+                </div>
+                <hr>
+
+            
+            <div id="div4">
+                <a href="{% url 'page2' %}" class="btn" id="btn1">&lt;   Prev</a>
+                <button type="submit" class="btn">Next   &gt;</button>                     
+            </div>
+            <p>Page 3/5</p> 
+        </form>
+        </div>               
+    </div>
+</body>
+</html>

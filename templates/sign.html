@@ -1,0 +1,275 @@
+{% if message %}
+<script>
+  alert("{{message}}");
+</script>
+{% endif %}
+
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+     <!--animation css-->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+     <!--font awesome*-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet">
+
+
+
+    <title>Login form</title>
+
+    <style>
+
+        body{
+            background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);
+            overflow-x: hidden;
+            height: 100vh;
+        }
+
+        .box{
+            border-radius: 60px;
+        }
+
+        h3 {
+            font-size: 3rem;
+            font-weight: 700;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .inp{
+            height: 50px;
+            background: #D3D3D3;
+            width: 60%;
+            border: none;
+            outline: none;
+            border-radius: 60px;
+        }
+
+        .inp:focus{
+            background: white;
+            border-top-style: hidden;
+            border-right-style: hidden;
+            border-left-style: hidden;
+            border-bottom-style: groove;
+            border-color: rgb(252, 81, 110);
+            border-radius: 0px;
+        }
+
+        
+
+        .btn1{
+            height: 50px;
+            width: 30%;
+            border: none;
+            outline: none;
+            border-radius: 60px;
+            font-weight: 600;
+            background: rgb(252, 81, 110);
+            color: black;
+        }
+        
+        .btn1:hover{
+            background: rgb(252, 13, 53);
+            transition: 0.5%;
+        }
+        
+        a {
+            color: rgb(252, 81, 110);
+            text-decoration: none;
+        
+        }
+
+        a:hover {
+            color: rgb(252, 13, 53);
+            text-decoration: underline;
+        }
+        
+        i {
+            margin-left: -33px;
+            cursor: pointer;
+            width: 50%;
+            
+        }
+        
+        .toggle{
+            position: absolute;
+            padding-top: 18px;
+        }
+        
+        #hide1{
+            display: none;
+        }
+        #hide2{
+            display: block;
+        }
+
+        #hide3{
+            display: none;
+        }
+        #hide4{
+            display: block;
+        }
+
+    </style>
+
+  </head>
+  <body>
+    
+
+        <div class="container mt-1 pt-5">
+
+            <div class="row">
+
+                <div class="col-12 col-sm-8 col-md-6 m-auto">
+
+                    <div class="card text-center box">
+
+                        <div class="card-body">
+
+                            <p class="fs-1 animate__animated animate__backInRight text-center pt-3">Welcome</p>
+                            
+                
+                            <form action="" method="post">
+        
+
+
+								{% csrf_token %}
+
+
+                                <div class="form-group py-1 pt-3">
+                                    <div class="col-lg-12">
+                                        <input type="text" class="inp px-3"id="" Placeholder="Username" required name="first1">
+                                    </div>
+                                </div>
+
+                                <div class="form-group py-1 pt-3">
+                                    <div class="col-lg-12">
+                                        <input type="text" class="inp px-3" id="" Placeholder="First Name" required name="first2">
+                                    </div>
+                                </div>
+
+                                <div class="form-group py-1 pt-3">
+                                    <div class="col-lg-12">
+                                        <input type="text" class="inp px-3" id="" Placeholder="Last Name" required name="first3">
+                                    </div>
+                                </div>
+
+                                <div class="form-group py-1 pt-3">
+                                    <div class="col-lg-12">
+                                        <input type="email" class="inp px-3" id="Email" Placeholder="Email" required name="first4">
+                                    </div>
+                                </div>
+        
+                                <div class="form-group py-1 pt-3">
+                                    <div class="col-lg-12">
+                                        <input type="password" class="inp px-3" Placeholder="Password" id="Password" required name="first5">
+                                        <span class="toggle" onclick="myFunction()">
+                                            <i class="fa-solid fa-eye" id="hide1"></i>
+                                            <i class="fa-sharp fa-solid fa-eye-slash" id="hide2"></i>
+                                        </span>
+                                    </div>
+                                </div>
+        
+
+                                <div class="form-group py-1 pt-3">
+                                    <div class="col-lg-12">
+                                        <input type="password" class="inp px-3" Placeholder="Confirm Password" id="Password1" required name="first6">
+                                        <span class="toggle" onclick="myFunction1()">
+                                            <i class="fa-solid fa-eye" id="hide3"></i>
+                                            <i class="fa-sharp fa-solid fa-eye-slash" id="hide4"></i>
+                                        </span>
+                                    </div>
+                                </div>
+
+                                
+
+
+                                    
+
+                                
+                                <div class="form-row py-3 pt-3">
+                                    <div class="col-lg-12">
+                                       <button type="submit" class="btn1">Sign UP</button>
+                                    </div> 
+                                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                <h4 class="mb-2 pt-1 text-center">Have an Account already? <a href="{% url 'login' %}">Login</a></h3>
+                                </div>
+
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                    
+
+
+
+
+
+
+   
+    <script>
+
+        function myFunction(){
+             var x = document.getElementById("Password");
+             var y = document.getElementById("hide1");
+             var z = document.getElementById("hide2");
+             
+             if(x.type == 'password'){
+                 x.type = "text";
+                 y.style.display ="block";
+                 z.style.display = "none";
+             }
+ 
+             else{
+                 x.type = "password";
+                 y.style.display ="none";
+                 z.style.display = "block";
+             }
+        } 
+
+        function myFunction1(){
+            var x = document.getElementById("Password1");
+            var y = document.getElementById("hide3");
+            var z = document.getElementById("hide4");
+            
+            if(x.type == 'password'){
+                x.type = "text";
+                y.style.display ="block";
+                z.style.display = "none";
+            }
+
+            else{
+                x.type = "password";
+                y.style.display ="none";
+                z.style.display = "block";
+            }
+       } 
+
+     </script>
+   
+  </body>
+</html>

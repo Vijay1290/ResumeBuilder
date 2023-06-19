@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+     <!--animation css-->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+     <!--font awesome*-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/CSS/page5.css">
+    <style>
+        body{
+            background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);
+            overflow-x: hidden;
+            height: 80%;
+        }
+        input{
+            height: 40px;
+            background: #D3D3D3;
+            width: 35%;
+            border: none;
+            outline: none;
+            border-radius: 60px;
+        }
+        input:focus{
+            background: white;
+            border-top-style: hidden;
+            border-right-style: hidden;
+            border-left-style: hidden;
+            border-bottom-style: groove;
+            border-color: rgb(252, 81, 110);
+            border-radius: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+
+        <div id="div1">
+            <h1 class="fs-1 animate__animated animate__backInRight text-center pt-3">Extra Details</h1><br>
+        </div>
+
+        <div id="div2">
+
+            <form action="" method="post">
+
+                {% csrf_token %}
+
+                <div id="div3">
+                    <p class="p">&#10004; Skills/Languages</p><br>
+                    <input type="text" required placeholder="Skill 1*" class="i" name="first1">
+                    <input type="text" required placeholder="Skill 2*" class="i" name="first2">
+                    <input type="text" required placeholder="Skill 3*" class="i" name="first3">
+                </div>
+                
+                <br>
+
+                
+                <div id="div3">
+                    <input type="text" required placeholder="Skill 4*" class="i" name="first4">
+                    <input type="text" required placeholder="Skill 5*" class="i" name="first5">
+                    <input type="text" required placeholder="Skill 6*" class="i" name="first6">
+                </div>
+
+
+                <hr>
+
+            
+                <div id="div3">
+                    <p class="p">&#10004; Interest</p><br>
+                    <input type="text" required placeholder="Interest 1*" class="i" name="first7">
+                    <input type="text" required placeholder="Interest 2*" class="i" name="first8">
+                    <input type="text" required placeholder="Interest 3*" class="i" name="first9">
+                </div>
+                
+                <br>
+
+
+                <div id="div3">
+                    <input type="text" required placeholder="Interest 4*" class="i" name="first10">
+                    <input type="text" required placeholder="Interest 5*" class="i" name="first11">
+                    <input type="text" required placeholder="Interest 6*" class="i" name="first12">
+                </div>
+                <hr>
+            
+                <div id="div4">
+                   <a href="{% url 'page4' %}" class="btn" id="btn1">&lt;   Prev</a>
+                   <button type="submit" class="btn">Next   &gt;</button>            
+                </div>
+                <p>Page 5/5</p>
+            </form>
+        
+    </div>
+</body>
+</html>
